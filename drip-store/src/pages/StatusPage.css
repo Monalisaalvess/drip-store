@@ -1,0 +1,37 @@
+.status-page {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  padding-top: 80px;
+  padding-bottom: 120px;
+}
+
+.status-page h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--dark-gray);
+}
+
+.status-page p {
+  font-size: 16px;
+  color: var(--dark-gray-3);
+}
+
+.status-page__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  padding: 0 24px;
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--white);
+  background: var(--primary);
+  border-radius: 4px;
+}
+
+.status-page__button:hover {
+  background: var(--tertiary);
+}

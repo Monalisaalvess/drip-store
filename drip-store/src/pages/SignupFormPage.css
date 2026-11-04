@@ -1,0 +1,41 @@
+.signup__form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.signup__form .page-title {
+  margin-bottom: 0;
+}
+
+.signup__fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 16px;
+}
+
+.signup__offers {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--dark-gray-2);
+  cursor: pointer;
+}
+
+.signup__offers input {
+  flex: 0 0 22px;
+  width: 22px;
+  height: 22px;
+  margin: 0;
+  accent-color: var(--primary);
+}
+
+.signup__submit {
+  width: 100%;
+}
