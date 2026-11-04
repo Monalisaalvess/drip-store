@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom"
-import "./Section.css"
+import "./components-CSS/Section.css"
 
-// title: texto do título | titleAlign: "left" (padrão) ou "center"
-// link: { text, href } | children: conteúdo da seção
 function Section({ title, titleAlign = "left", link, children }) {
   return (
     <section className="section">

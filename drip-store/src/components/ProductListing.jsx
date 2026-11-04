@@ -1,8 +1,6 @@
 import ProductCard from "./ProductCard.jsx"
-import "./ProductListing.css"
+import "./components-CSS/ProductListing.css"
 
-// products: [{ id?, name, image, price, priceDiscount? }]
-// columns: nº de colunas no desktop (4 na Home, 3 na listagem)
 function ProductListing({ products = [], columns = 4 }) {
   return (
     <div className={`product-listing product-listing--${columns}`}>

@@ -1,23 +1,21 @@
 import { useRef, useState } from "react"
 import { Navigate, useNavigate } from "react-router-dom"
+
 import Layout from "./Layout.jsx"
-import FormField from "../components/FormField.jsx"
+
+import FormField       from "../components/FormField.jsx"
 import { formatPrice } from "../components/ProductCard.jsx"
+
 import { calcShipping, useCart } from "../context/CartContext.jsx"
-import { useAuth } from "../context/AuthContext.jsx"
+import { useAuth }               from "../context/AuthContext.jsx"
 import {
-  emptyProfile,
-  maskCEP,
-  maskCPF,
-  maskCVV,
-  maskCard,
-  maskExpiry,
-  maskPhone,
-  onlyDigits,
-  isCPF,
+  emptyProfile,  maskCEP,  maskCPF,
+  maskCVV,  maskCard,  maskExpiry,
+  maskPhone, onlyDigits, isCPF,
   validateProfile,
 } from "../utils/forms.js"
-import "./CheckoutPage.css"
+
+import "./pages-CSS/CheckoutPage.css"
 
 const emptyPayment = {
   method: "card",
@@ -49,7 +47,7 @@ function CheckoutPage() {
   const [profile, setProfile] = useState({ ...emptyProfile, ...(user ?? {}) })
   const [payment, setPayment] = useState(emptyPayment)
   const [errors, setErrors] = useState({})
-  const placedRef = useRef(false) // evita voltar ao carrinho depois de finalizar o pedido
+  const placedRef = useRef(false)
 
   if (items.length === 0) return placedRef.current ? null : <Navigate to="/carrinho" replace />
 
@@ -70,7 +68,6 @@ function CheckoutPage() {
     const found = { ...validateProfile(profile), ...validatePayment(payment) }
     if (Object.keys(found).length > 0) {
       setErrors(found)
-      // leva o foco ao primeiro campo com erro
       requestAnimationFrame(() => document.querySelector("[aria-invalid='true']")?.focus())
       return
     }

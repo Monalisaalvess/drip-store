@@ -1,7 +1,9 @@
 import { useState } from "react"
-import arrowLeft from "../assets/icons/arrow-left.svg"
+
+import arrowLeft  from "../assets/icons/arrow-left.svg"
 import arrowRight from "../assets/icons/arrow-right.svg"
-import "./Gallery.css"
+
+import "./components-CSS/Gallery.css"
 
 const toNumber = (value) => {
   const n = parseFloat(value)

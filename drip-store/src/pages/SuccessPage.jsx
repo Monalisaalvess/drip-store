@@ -1,15 +1,17 @@
 import { Link, Navigate, useLocation } from "react-router-dom"
 import Layout from "./Layout.jsx"
+
 import { formatPrice } from "../components/ProductCard.jsx"
-import { useAuth } from "../context/AuthContext.jsx"
-import "./SuccessPage.css"
+import { useAuth }    from "../context/AuthContext.jsx"
+
+import "./pages-CSS/SuccessPage.css"
 
 function SuccessPage() {
   const { state } = useLocation()
   const { orders } = useAuth()
   const order = orders.find((o) => o.id === state?.orderId)
 
-  // sem pedido recém-criado não há o que mostrar
+
   if (!order) return <Navigate to="/" replace />
 
   const { profile, payment } = order

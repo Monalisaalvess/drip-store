@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom"
-import "./FooterInfo.css"
+import "./components-CSS/FooterInfo.css"
 
-// title: título da coluna | informations: [{ text, link? }]
 function FooterInfo({ title, informations = [] }) {
   return (
     <div className="footer-info">

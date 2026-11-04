@@ -1,9 +1,6 @@
 import { useState } from "react"
-import "./ProductOptions.css"
+import "./components-CSS/ProductOptions.css"
 
-// options: ["39", "41"] ou ["#000", "#111"]
-// shape: "square" | "circle" | radius: border-radius do square
-// type: "text" | "color" | title: rótulo opcional do grupo
 function ProductOptions({ options = [], radius = "4px", shape = "square", type = "text", title, onChange }) {
   const [selected, setSelected] = useState(null)
 

@@ -34,7 +34,7 @@
   border-color: transparent;
 }
 
-/* seleção: borda de 2px na cor primary */
+
 .product-options__item--selected {
   border-color: var(--primary);
   box-shadow: inset 0 0 0 1px var(--primary);

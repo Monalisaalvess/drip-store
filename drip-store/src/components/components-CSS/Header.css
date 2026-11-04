@@ -3,6 +3,7 @@
 }
 
 .header__inner {
+  height: 200px;
   display: grid;
   grid-template-columns: auto minmax(0, 1fr) auto auto;
   grid-template-areas:
@@ -181,7 +182,8 @@
   border-bottom-color: var(--primary);
 }
 
-/* ---------- mobile ---------- */
+
+
 @media (max-width: 900px) {
   .header__inner {
     grid-template-columns: auto minmax(0, 1fr) auto;

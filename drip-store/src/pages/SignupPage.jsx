@@ -1,10 +1,10 @@
 import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
-import AuthHero from "./AuthHero.jsx"
-import FormField from "../components/FormField.jsx"
+
+import AuthHero    from "./AuthHero.jsx"
+import FormField   from "../components/FormField.jsx"
 import { isEmail } from "../utils/forms.js"
 
-// Primeira etapa do cadastro: só o e-mail
 function SignupPage() {
   const navigate = useNavigate()
   const [email, setEmail] = useState("")

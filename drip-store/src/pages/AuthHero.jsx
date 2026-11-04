@@ -1,14 +1,13 @@
 import Layout from "./Layout.jsx"
-import "./AuthHero.css"
-
-// Moldura das telas de login e "crie sua conta": cartão à esquerda e imagem à direita
+import "./pages-CSS/AuthHero.css"
+ 
 function AuthHero({ children }) {
   return (
     <Layout simpleHeader>
       <div className="auth-hero">
         <div className="auth-hero__inner container">
           <section className="auth-hero__card">{children}</section>
-          <img className="auth-hero__image" src="/produc-image-5.jpeg" alt="" aria-hidden="true" />
+          <img className="auth-hero-image" src="./public/slide-tenis.png" alt="" aria-hidden="true" />
         </div>
       </div>
     </Layout>

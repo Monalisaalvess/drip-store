@@ -1,7 +1,8 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
-//import "./HeroSlider.css"
-import "../pages/HomePage.css"
+import "./components-CSS/HeroSlider.css"
+//import "../pages-CSS/HomePage.css"
+
 const slides = [
   {
     label: "Melhores ofertas personalizadas",

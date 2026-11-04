@@ -2,11 +2,8 @@ import { createContext, useCallback, useContext, useMemo } from "react"
 import { useLocalStorage } from "../utils/useLocalStorage.js"
 
 const CartContext = createContext(null)
-
-// Cupons de exemplo (percentual de desconto sobre o subtotal)
 const COUPONS = { DRIP10: 10, NIKE15: 15 }
 
-// Frete de exemplo: grátis acima de R$ 400
 export const FREE_SHIPPING_FROM = 400
 export const SHIPPING_PRICE = 19.9
 export const calcShipping = (subtotal) =>
@@ -66,7 +63,6 @@ export function CartProvider({ children }) {
 
   const clearCart = useCallback(() => setState(initialState), [setState])
 
-  // devolve true se o cupom existe
   const applyCoupon = useCallback(
     (code) => {
       const normalized = String(code).trim().toUpperCase()

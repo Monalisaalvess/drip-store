@@ -1,8 +1,7 @@
 import logoHeader from "../assets/logo-header.svg"
 import logoFooter from "../assets/logo-footer.svg"
-import "./Logo.css"
+import "./components-CSS/Logo.css"
 
-// variant: "header" (colorida) ou "footer" (branca)
 function Logo({ variant = "header" }) {
   const src = variant === "footer" ? logoFooter : logoHeader
   return (

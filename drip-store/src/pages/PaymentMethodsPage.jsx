@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom"
-import AccountLayout from "./AccountLayout.jsx"
-import { useAuth } from "../context/AuthContext.jsx"
-import "./PaymentMethodsPage.css"
 
-// Lista os cartões usados nas compras (só os 4 últimos dígitos são guardados)
+import AccountLayout from "./AccountLayout.jsx"
+import { useAuth }   from "../context/AuthContext.jsx"
+
+import "./pages-CSS/PaymentMethodsPage.css"
+
 function PaymentMethodsPage() {
   const { orders: allOrders, user } = useAuth()
   const orders = allOrders.filter(

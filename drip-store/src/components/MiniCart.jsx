@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom"
 import { useCart } from "../context/CartContext.jsx"
 import { formatPrice } from "./ProductCard.jsx"
-import "./MiniCart.css"
+import "./components-CSS/MiniCart.css"
 
-// Pop-up do carrinho exibido ao clicar no ícone do header
 function MiniCart({ onClose }) {
   const { items, total, subtotal, clearCart, removeItem } = useCart()
   const isEmpty = items.length === 0

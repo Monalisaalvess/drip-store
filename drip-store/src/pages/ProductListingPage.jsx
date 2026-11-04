@@ -1,11 +1,14 @@
 import { useMemo, useState } from "react"
 import { useSearchParams } from "react-router-dom"
+
 import Layout from "./Layout.jsx"
-import Section from "../components/Section.jsx"
+
+import Section        from "../components/Section.jsx"
 import ProductListing from "../components/ProductListing.jsx"
-import FilterGroup from "../components/FilterGroup.jsx"
+import FilterGroup    from "../components/FilterGroup.jsx"
+
 import { filterGroups, products } from "../data/products.js"
-import "./ProductListingPage.css"
+import "./pages-CSS/ProductListingPage.css"
 
 const normalize = (text) =>
   String(text)

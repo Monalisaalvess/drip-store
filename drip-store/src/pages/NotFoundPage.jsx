@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import Layout from "./Layout.jsx"
-import "./StatusPage.css"
+import "./pages-CSS/StatusPage.css"
 
 function NotFoundPage() {
   return (

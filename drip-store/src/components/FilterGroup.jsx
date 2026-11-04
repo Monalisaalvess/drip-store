@@ -1,8 +1,5 @@
-import "./FilterGroup.css"
+import "./components-CSS/FilterGroup.css"
 
-// title: título do grupo | inputType: "checkbox" ou "radio"
-// options: [{ text, value? }] | name: nome do campo | selected: valores marcados
-// onChange(value, checked): avisa a página quando o usuário marca/desmarca
 function FilterGroup({ title, inputType = "checkbox", options = [], name, selected = [], onChange }) {
   const groupName = name ?? title
   return (

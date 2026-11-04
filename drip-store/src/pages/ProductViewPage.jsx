@@ -1,15 +1,21 @@
 import { useState } from "react"
 import { Link, useNavigate, useParams } from "react-router-dom"
+
 import Layout from "./Layout.jsx"
+
 import Gallery from "../components/Gallery.jsx"
-import BuyBox from "../components/BuyBox.jsx"
-import ProductOptions from "../components/ProductOptions.jsx"
+import BuyBox  from "../components/BuyBox.jsx"
 import Section from "../components/Section.jsx"
+
+import ProductOptions from "../components/ProductOptions.jsx"
 import ProductListing from "../components/ProductListing.jsx"
+
 import { getProductById, products } from "../data/products.js"
+
+import { useCart }  from "../context/CartContext.jsx"
 import NotFoundPage from "./NotFoundPage.jsx"
-import { useCart } from "../context/CartContext.jsx"
-import "./ProductViewPage.css"
+
+import "./pages-CSS/ProductViewPage.css"
 
 function ProductViewPage() {
   const { id } = useParams()

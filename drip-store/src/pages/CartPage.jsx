@@ -1,13 +1,17 @@
 import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
+
 import Layout from "./Layout.jsx"
-import Section from "../components/Section.jsx"
-import ProductListing from "../components/ProductListing.jsx"
+import Section         from "../components/Section.jsx"
+import ProductListing  from "../components/ProductListing.jsx"
 import { formatPrice } from "../components/ProductCard.jsx"
+
 import { useCart, FREE_SHIPPING_FROM } from "../context/CartContext.jsx"
-import { products } from "../data/products.js"
+
+import { products }       from "../data/products.js"
 import { isCEP, maskCEP } from "../utils/forms.js"
-import "./CartPage.css"
+
+import "./pages-CSS/CartPage.css"
 
 function CartPage() {
   const navigate = useNavigate()

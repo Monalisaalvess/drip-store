@@ -1,6 +1,7 @@
 import AccountLayout from "./AccountLayout.jsx"
-import { useAuth } from "../context/AuthContext.jsx"
-import "./OrdersPage.css"
+import { useAuth }   from "../context/AuthContext.jsx"
+
+import "./pages-CSS/OrdersPage.css"
 
 const statusClass = {
   "Pagamento pendente": "pending",
@@ -9,7 +10,6 @@ const statusClass = {
   Cancelado: "canceled",
 }
 
-// Pedidos de exemplo exibidos enquanto a pessoa ainda não fez nenhuma compra
 const demoOrders = [
   { id: "20240114", date: "2024-01-14", status: "Pagamento pendente", name: "Tênis Nike Revolution 6 Next Nature Masculino", image: "/product-thumb-1.jpeg" },
   { id: "20231202", date: "2023-12-02", status: "Finalizado", name: "Tênis Nike Air Max Ultra Feminino", image: "/product-thumb-5.jpeg" },
@@ -22,7 +22,6 @@ const formatDate = (iso) => new Date(iso).toLocaleDateString("pt-BR")
 
 function OrdersPage() {
   const { orders: allOrders, user } = useAuth()
-  // só os pedidos feitos com o e-mail da conta logada
   const orders = allOrders.filter(
     (o) => o.profile.email.toLowerCase() === (user?.email ?? "").toLowerCase()
   )

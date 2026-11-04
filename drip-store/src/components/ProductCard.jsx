@@ -1,11 +1,9 @@
 import { Link } from "react-router-dom"
-import "./ProductCard.css"
+import "./components-CSS/ProductCard.css"
 
 export const formatPrice = (value) =>
   Number(value).toLocaleString("pt-BR", { style: "currency", currency: "BRL" })
 
-// image, name, price, priceDiscount (obrigatórios pelo README)
-// id e category são opcionais: id transforma o card em link para /product/:id
 function ProductCard({ id, image, name, price, priceDiscount, category }) {
   const hasDiscount = priceDiscount !== undefined && priceDiscount !== null
   const percent = hasDiscount ? Math.round((1 - priceDiscount / price) * 100) : 0

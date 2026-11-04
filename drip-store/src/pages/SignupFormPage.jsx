@@ -1,10 +1,14 @@
 import { useRef, useState } from "react"
 import { Navigate, useLocation, useNavigate } from "react-router-dom"
+
 import Layout from "./Layout.jsx"
-import FormField from "../components/FormField.jsx"
+
+import FormField   from "../components/FormField.jsx"
 import { useAuth } from "../context/AuthContext.jsx"
+
 import { emptyProfile, maskCEP, maskCPF, maskPhone, validateProfile } from "../utils/forms.js"
-import "./SignupFormPage.css"
+
+import "./pages-CSS/SignupFormPage.css"
 
 function SignupFormPage() {
   const { state } = useLocation()
@@ -15,7 +19,7 @@ function SignupFormPage() {
   const [errors, setErrors] = useState({})
   const [acceptsOffers, setAcceptsOffers] = useState(true)
 
-  const justRegistered = useRef(false) // evita sobrescrever o redirecionamento pós-cadastro
+  const justRegistered = useRef(false) 
 
   if (user && !justRegistered.current) return <Navigate to="/minhas-informacoes" replace />
 

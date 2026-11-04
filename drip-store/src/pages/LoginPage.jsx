@@ -1,7 +1,8 @@
 import { useState } from "react"
 import { Link, Navigate, useLocation, useNavigate } from "react-router-dom"
-import AuthHero from "./AuthHero.jsx"
-import FormField from "../components/FormField.jsx"
+
+import AuthHero    from "./AuthHero.jsx"
+import FormField   from "../components/FormField.jsx"
 import { useAuth } from "../context/AuthContext.jsx"
 import { isEmail } from "../utils/forms.js"
 

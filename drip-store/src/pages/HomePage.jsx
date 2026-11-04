@@ -1,10 +1,12 @@
 import Layout from "./Layout.jsx"
-import Gallery from "../components/Gallery.jsx"
-import Section from "../components/Section.jsx"
+
+import Gallery        from "../components/Gallery.jsx"
+import Section        from "../components/Section.jsx"
 import ProductListing from "../components/ProductListing.jsx"
+import HeroSlider     from "../components/HeroSlider.jsx"
+
 import { products } from "../data/products.js"
-import "./HomePage.css"
-import HeroSlider from "../components/HeroSlider.jsx"
+import "./pages-CSS/HomePage.css"
 
 const collections = [
   { src: "/collection-1.png", alt: "Novo drop Supreme" },

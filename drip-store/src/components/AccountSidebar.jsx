@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom"
-import "./AccountSidebar.css"
+import "./components-CSS/AccountSidebar.css"
 
 const links = [
   { text: "Meus Pedidos", to: "/meus-pedidos" },
@@ -18,14 +18,11 @@ function AccountSidebar() {
           <li key={link.to}>
             <NavLink
               to={link.to}
-              className={({ isActive }) =>
-                `account-sidebar__link${isActive ? " account-sidebar__link--active" : ""}`
-              }
-            >
+               className={({ isActive }) =>
+                `account-sidebar__link${isActive ? " account-sidebar__link--active" : ""}`}>
               {link.text}
             </NavLink>
-          </li>
-        ))}
+          </li> ))}
       </ul>
     </nav>
   )

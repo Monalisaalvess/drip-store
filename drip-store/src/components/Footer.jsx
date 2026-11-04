@@ -1,9 +1,11 @@
 import Logo from "./Logo.jsx"
 import FooterInfo from "./FooterInfo.jsx"
-import facebook from "../assets/icons/facebook.svg"
+
+import facebook  from "../assets/icons/facebook.svg"
 import instagram from "../assets/icons/instagram.svg"
-import twitter from "../assets/icons/twitter.svg"
-import "./Footer.css"
+import twitter   from "../assets/icons/twitter.svg"
+
+import "./components-CSS/Footer.css"
 
 const informacao = [
   { text: "Sobre Drip Store", link: "/about" },

@@ -3,16 +3,13 @@ import { useLocation, useNavigate } from "react-router-dom"
 import Layout from "./Layout.jsx"
 import AccountSidebar from "../components/AccountSidebar.jsx"
 import { useAuth } from "../context/AuthContext.jsx"
-import "./AccountLayout.css"
+import "./pages-CSS/AccountLayout.css"
 
-// Estrutura das telas da área logada: menu lateral + cartão com o conteúdo
-// title: título do cartão | action: elemento opcional à direita do título (ex.: "Editar")
 function AccountLayout({ title, action, children }) {
   const { user } = useAuth()
   const location = useLocation()
   const navigate = useNavigate()
 
-  // sem login, manda para /login e volta para esta página depois de entrar
   useEffect(() => {
     if (!user) navigate("/login", { replace: true, state: { from: location.pathname } })
   }, [user, navigate, location.pathname])

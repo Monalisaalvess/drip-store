@@ -1,9 +1,12 @@
 import { useState } from "react"
+
 import AccountLayout from "./AccountLayout.jsx"
-import FormField from "../components/FormField.jsx"
-import { useAuth } from "../context/AuthContext.jsx"
-import { maskCEP, maskCPF, maskPhone, validateProfile } from "../utils/forms.js"
-import "./MyInfoPage.css"
+import FormField     from "../components/FormField.jsx"
+import { useAuth }   from "../context/AuthContext.jsx"
+
+import { maskCEP, maskCPF, maskPhone, validateProfile } from "../utils/forms.js" 
+
+import "./pages-CSS/MyInfoPage.css"
 
 const personal = [
   ["Nome", "name"],
@@ -21,7 +24,7 @@ const delivery = [
 
 function MyInfoPage() {
   const { user, updateUser } = useAuth()
-  const data = user ?? {} // user fica null por um instante ao sair da conta
+  const data = user ?? {}
   const [editing, setEditing] = useState(false)
   const [values, setValues] = useState(user ?? {})
   const [errors, setErrors] = useState({})

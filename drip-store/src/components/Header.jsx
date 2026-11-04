@@ -1,12 +1,16 @@
 import { useEffect, useRef, useState } from "react"
 import { Link, NavLink, useLocation, useNavigate } from "react-router-dom"
-import Logo from "./Logo.jsx"
+
+import Logo     from "./Logo.jsx"
 import MiniCart from "./MiniCart.jsx"
+
 import { accountLinks } from "./AccountSidebar.jsx"
+
 import { useCart } from "../context/CartContext.jsx"
 import { useAuth } from "../context/AuthContext.jsx"
-import miniCart from "../assets/icons/mini-cart.svg"
-import "./Header.css"
+import miniCart    from "../assets/icons/mini-cart.svg"
+
+import "./components-CSS/Header.css"
 
 const navLinks = [
   { text: "Home", to: "/", end: true },
@@ -15,7 +19,6 @@ const navLinks = [
   { text: "Meus Pedidos", to: "/meus-pedidos" },
 ]
 
-// simple: versão enxuta (só logo) usada nas telas de login e cadastro
 function Header({ simple = false }) {
   const [term, setTerm] = useState("")
   const [menuOpen, setMenuOpen] = useState(false)
@@ -26,13 +29,11 @@ function Header({ simple = false }) {
   const { count } = useCart()
   const { user, logout } = useAuth()
 
-  // fecha menu e mini carrinho ao trocar de página
   useEffect(() => {
     setMenuOpen(false)
     setCartOpen(false)
   }, [pathname])
 
-  // fecha o mini carrinho com clique fora ou Esc
   useEffect(() => {
     if (!cartOpen) return
     const onClick = (e) => {
@@ -47,7 +48,6 @@ function Header({ simple = false }) {
     }
   }, [cartOpen])
 
-  // busca ao clicar na lupa ou apertar Enter -> /products?filter=termo
   function handleSearch(event) {
     event.preventDefault()
     const value = term.trim()

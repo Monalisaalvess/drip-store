@@ -2,20 +2,15 @@ import { createContext, useCallback, useContext, useMemo } from "react"
 import { useLocalStorage } from "../utils/useLocalStorage.js"
 
 const AuthContext = createContext(null)
-
 const capitalize = (text) => text.charAt(0).toUpperCase() + text.slice(1)
 
-// Autenticação simulada (sem servidor): os dados ficam no localStorage
 export function AuthProvider({ children }) {
+
   const [user, setUser] = useLocalStorage("drip-user", null)
   const [accounts, setAccounts] = useLocalStorage("drip-accounts", {})
   const [orders, setOrders] = useLocalStorage("drip-orders", [])
-
   const saveAccount = useCallback(
-    (profile) => setAccounts((all) => ({ ...all, [profile.email.toLowerCase()]: profile })),
-    [setAccounts]
-  )
-
+    (profile) => setAccounts((all) => ({ ...all, [profile.email.toLowerCase()]: profile })),[setAccounts])
   const register = useCallback(
     (profile) => {
       saveAccount(profile)
@@ -24,7 +19,6 @@ export function AuthProvider({ children }) {
     [saveAccount, setUser]
   )
 
-  // Qualquer e-mail/senha preenchidos entram; se a conta existe, carrega o perfil salvo
   const login = useCallback(
     (email) => {
       const saved = accounts[email.trim().toLowerCase()]
@@ -45,7 +39,6 @@ export function AuthProvider({ children }) {
   )
 
   const logout = useCallback(() => setUser(null), [setUser])
-
   const updateUser = useCallback(
     (patch) => {
       const next = { ...user, ...patch }
@@ -56,7 +49,6 @@ export function AuthProvider({ children }) {
   )
 
   const addOrder = useCallback((order) => setOrders((all) => [order, ...all]), [setOrders])
-
   const value = useMemo(
     () => ({ user, orders, register, login, logout, updateUser, addOrder }),
     [user, orders, register, login, logout, updateUser, addOrder]
