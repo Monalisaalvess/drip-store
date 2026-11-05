@@ -14,16 +14,15 @@
 }
 
 .home__collections {
-  display: flex; margin-bottom:1rem; 
+  display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 2rem;
+  gap: 12px;
 }
 .home__section ul{
    display: flex; margin-bottom:1rem; 
  
   gap: 2rem;
 }
-
 .home__collections img {
   width: 100%;
   height: auto;
