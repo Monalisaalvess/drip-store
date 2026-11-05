@@ -18,7 +18,7 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
 }
-.home__section ul{
+.home__sections ul{
    display: flex; margin-bottom:1rem; 
  
   gap: 2rem;
