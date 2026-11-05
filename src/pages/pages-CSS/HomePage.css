@@ -14,9 +14,14 @@
 }
 
 .home__collections {
-  display: grid;
+  display: flex; margin-bottom:1rem; 
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
+  gap: 2rem;
+}
+.home__section ul{
+   display: flex; margin-bottom:1rem; 
+ 
+  gap: 2rem;
 }
 
 .home__collections img {
