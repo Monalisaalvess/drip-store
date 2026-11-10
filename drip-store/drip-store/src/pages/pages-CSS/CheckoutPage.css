@@ -1,0 +1,159 @@
+.checkout__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  align-items: start;
+  gap: 24px;
+}
+
+.checkout__forms {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.checkout__fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 16px;
+}
+
+.checkout__methods {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  margin: 0 0 20px;
+  padding: 0;
+  border: 0;
+}
+
+.checkout__methods legend {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--dark-gray-2);
+}
+
+.checkout__methods label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--dark-gray-2);
+  cursor: pointer;
+}
+
+.checkout__methods input {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  accent-color: var(--primary);
+}
+
+.checkout__boleto {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--dark-gray-3);
+}
+
+.checkout__summary {
+  position: sticky;
+  top: 24px;
+}
+
+.checkout__items {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--light-gray-2);
+}
+
+.checkout__items li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.checkout__items img {
+  flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  background: #e2e3ff;
+  border-radius: 4px;
+}
+
+.checkout__items p {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--dark-gray-2);
+}
+
+.checkout__items span {
+  font-size: 12px;
+  color: var(--dark-gray-3);
+}
+
+.checkout__lines {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding: 16px 0;
+}
+
+.checkout__lines div {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: var(--dark-gray-2);
+}
+
+.checkout__lines dd {
+  margin: 0;
+  font-weight: 700;
+}
+
+.checkout__total {
+  padding: 16px;
+  background: #fffaf0;
+  border-radius: 4px;
+}
+
+.checkout__total div {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  font-weight: 700;
+  color: var(--dark-gray-2);
+}
+
+.checkout__total strong {
+  font-size: 20px;
+  color: var(--primary);
+}
+
+.checkout__total p {
+  margin-top: 4px;
+  font-size: 12px;
+  text-align: right;
+  color: var(--light-gray);
+}
+
+.checkout__pay {
+  width: 100%;
+  margin-top: 20px;
+}
+
+@media (max-width: 1000px) {
+  .checkout__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .checkout__summary {
+    position: static;
+    order: 2;
+  }
+}

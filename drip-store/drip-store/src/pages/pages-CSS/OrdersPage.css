@@ -1,0 +1,70 @@
+.orders__row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--light-gray-2);
+}
+
+.orders__row:last-child {
+  border-bottom: 0;
+}
+
+.orders__row img {
+  flex: 0 0 64px;
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  background: #e2e3ff;
+  border-radius: 4px;
+}
+
+.orders__info {
+  flex: 1;
+  min-width: 0;
+}
+
+.orders__meta {
+  font-size: 12px;
+  color: var(--light-gray);
+}
+
+.orders__name {
+  margin-top: 4px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--dark-gray);
+}
+
+.orders__status {
+  flex: 0 0 auto;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: right;
+  color: var(--dark-gray-3);
+}
+
+.orders__status--pending {
+  color: var(--warning);
+}
+
+.orders__status--approved {
+  color: #2c9a52;
+}
+
+.orders__status--canceled {
+  color: var(--error);
+}
+
+@media (max-width: 640px) {
+  .orders__row {
+    flex-wrap: wrap;
+  }
+
+  .orders__status {
+    flex-basis: 100%;
+    padding-left: 80px;
+    text-align: left;
+  }
+}
