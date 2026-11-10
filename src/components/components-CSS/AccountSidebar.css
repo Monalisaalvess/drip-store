@@ -1,0 +1,35 @@
+.account-sidebar {
+  flex: 0 0 240px;
+  width: 240px;
+  padding: 24px;
+}
+
+.account-sidebar__title {
+  padding-bottom: 16px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--dark-gray-2);
+}
+
+.account-sidebar__link {
+  display: block;
+  padding: 14px 0;
+  font-size: 14px;
+  color: var(--dark-gray-2);
+  border-top: 1px solid var(--light-gray-2);
+}
+
+.account-sidebar__link:hover {
+  color: var(--primary);
+}
+
+.account-sidebar__link--active {
+  font-weight: 700;
+  color: var(--primary);
+}
+
+@media (max-width: 900px) {
+  .account-sidebar {
+    display: none;
+  }
+}
