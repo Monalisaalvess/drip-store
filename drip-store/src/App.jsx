@@ -4,6 +4,7 @@ import { useEffect } from "react"
 import { AuthProvider } from "./context/AuthContext.jsx"
 import { CartProvider } from "./context/CartContext.jsx"
 
+
 import HomePage           from "./pages/HomePage.jsx"
 import ProductListingPage from "./pages/ProductListingPage.jsx"
 import ProductViewPage    from "./pages/ProductViewPage.jsx"
@@ -18,6 +19,7 @@ import MyInfoPage         from "./pages/MyInfoPage.jsx"
 import PaymentMethodsPage from "./pages/PaymentMethodsPage.jsx"
 import ComingSoonPage     from "./pages/ComingSoonPage.jsx"
 import NotFoundPage       from "./pages/NotFoundPage.jsx"
+
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -34,7 +36,7 @@ function RedirectToProducts() {
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <AuthProvider>
         <CartProvider>
           <ScrollToTop />
